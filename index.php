@@ -5,6 +5,6 @@
   </head>
   <body>
   Cette page est une
-  page toute simple
+  page toute simpl
   </body>
 </html>
