@@ -1,3 +1,8 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
 <?php
 //https://www.apptha.com/blog/import-google-calendar-events-in-php/
  require_once("IcalLink.php");  
@@ -8,7 +13,7 @@
 //to change
 $timeZone = trim ( $icsEvents [1] ['X-WR-TIMEZONE'] ); 
 unset( $icsEvents [1] );
-$html = '<table><tr><td> Event </td><td> Start at </td><td> End at </td></tr>';
+$html = '<table class"table"><tr><td> Event </td><td> Start at </td><td> End at </td></tr>';
 foreach( $icsEvents as $icsEvent){
         /* Getting start date and time */
         $start = isset( $icsEvent ['DTSTART;VALUE=DATE'] ) ? $icsEvent ['DTSTART;VALUE=DATE'] : $icsEvent ['DTSTART'];
@@ -28,3 +33,5 @@ echo $html.'</table>';
 
 
 ?>
+    
+</html>
