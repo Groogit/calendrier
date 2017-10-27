@@ -1,9 +1,13 @@
 <?php
 //https://www.apptha.com/blog/import-google-calendar-events-in-php/
+ require_once("IcalLink.php");  
 
+ require_once("InfoIcal.php");
 
 /* Here we are getting the timezone to get the event dates according to gio location */
-$timeZone = trim ( $icsEvents [1] ['X-WR-TIMEZONE'] );
+//to change
+$timeZone = trim ( $icsEvents [1] ['X-WR-TIMEZONE'] ); 
+
 unset( $icsEvents [1] );
 $html = '<table><tr><td> Event </td><td> Start at </td><td> End at </td></tr>';
 foreach( $icsEvents as $icsEvent){
